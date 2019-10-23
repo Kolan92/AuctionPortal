@@ -1,0 +1,25 @@
+<!-- <h2 [ngStyle]="{backgroundColor: 'yellow'}">Menu</h2> -->
+<!-- <h2 [style.backgroundColor]="'red'">Menu2</h2> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" (click)="toggleMenu = !toggleMenu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- <div class="collapse navbar-collapse" [ngClass]="{show: toggleMenu}"> -->
+  <div class="collapse navbar-collapse" [class.show]="toggleMenu">
+    <ul class="navbar-nav">
+      <li class="nav-item active" apHighlight [routerLinkActive]="'active'"  *ngFor="let menuItem of menuItems">
+        <a class="nav-link" [routerLink]="menuItem.href">{{menuItem.title}}</a>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+      <a class="btn btn-primary" [routerLink]="'add-auction'">
+        <i class="fa fa-plus"></i> Dodaj
+      </a>
+      <a class="btn btn-secondary ml-2" [routerLink]="'cart'">
+        <i class="fa fa-shopping-basket"></i> Koszyk
+        <ap-cart-items-site></ap-cart-items-site>
+      </a>
+    </div>
+</nav>

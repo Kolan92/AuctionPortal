@@ -1,0 +1,13 @@
+<div apHighlight class="card">
+  <div class="card-header">{{auction.title}}</div>
+  <img class="card-img" [src]="auction.imgURL">
+  <div class="card-body">
+    <p class="card-text">{{auction.description}}</p>
+    <div class="d-flex justify-content-between">
+      <strong> Cena {{auction.price}} </strong>
+      <button  class="btn btn-primary" (click)="addToCartClick.emit(auction)">
+        <i class="fa fas fa-cart-arrow-down"></i>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+{
+  "auctions": [
+    {
+      "id": 0,
+      "title": "Pies",
+      "description": "Grzeczny",
+      "price": 100,
+      "imgURL": "https://picsum.photos/id/1025/200/200"
+    },
+    {
+      "id": 1,
+      "title": "Pies",
+      "description": "Niegrzeczny",
+      "price": -100,
+      "imgURL": "https://picsum.photos/id/169/200/200"
+    },
+    {
+      "id": 2,
+      "title": "Kot",
+      "description": "Grzeczny",
+      "price": 200,
+      "imgURL": "https://picsum.photos/id/593/200/200"
+    },
+    {
+      "id": 3,
+      "title": "Kot",
+      "description": "Niegrzeczny",
+      "price": 0.01,
+      "imgURL": "https://picsum.photos/id/1074/200/200"
+    },
+    {
+      "id": 4,
+      "title": "Pies",
+      "description": "Grzeczny",
+      "price": 100,
+      "imgURL": "https://picsum.photos/id/1025/200/200"
+    },
+    {
+      "id": 5,
+      "title": "Pies",
+      "description": "Niegrzeczny",
+      "price": -100,
+      "imgURL": "https://picsum.photos/id/169/200/200"
+    },
+    {
+      "id": 6,
+      "title": "Kot",
+      "description": "Grzeczny",
+      "price": 200,
+      "imgURL": "https://picsum.photos/id/593/200/200"
+    },
+    {
+      "id": 7,
+      "title": "Kot",
+      "description": "Niegrzeczny",
+      "price": 0.01,
+      "imgURL": "https://picsum.photos/id/1074/200/200"
+    }
+  ]
+}

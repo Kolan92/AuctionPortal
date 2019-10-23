@@ -1,0 +1,7 @@
+<div>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let auction of cartService.getItems() | async ">
+      {{ auction | json }}
+    </li>
+  </ul>
+</div>
