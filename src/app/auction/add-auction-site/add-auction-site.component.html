@@ -5,31 +5,39 @@
         <img
           class="img-thumbnail"
           alt="Podgląd fotografii"
-          src="https://picsum.photos/id/8/600/600"
+          [src]="'https://picsum.photos/id/' + imgId + '/600/600'"
         />
       </div>
       <div class="col-6">
-        <form>
+        <form #addAuctionForm="ngForm" (ngSubmit)="handleFormSubmit(addAuctionForm)">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="fa fa-edit"></i></span>
             </div>
             <input
+              ngModel
+              #title="ngModel"
               type="text"
               name="title"
               class="form-control"
               placeholder="Nazwa aukcji"
+              required
             />
+            <div *ngIf="title.touched && title?.errors?.required">
+              Pole jest wymaganase
+            </div>
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="fa fa-tag"></i></span>
             </div>
             <input
+              ngModel
               type="number"
               name="price"
               class="form-control"
               placeholder="Cena aukcji"
+              required
             />
           </div>
 
@@ -39,18 +47,20 @@
                 ><i class="fa fa-image"></i
               ></span>
             </div>
-            <input type="number" name="imgUrl" class="form-control" />
+            <input [(ngModel)]="imgId" type="number" name="imgUrl" class="form-control" required />
           </div>
           <div class="input-group mb-3">
             <textarea
+              ngModel
               rows="5"
               class="form-control"
               name="description"
               placeholder="Opis aukcji"
+              required
             ></textarea>
           </div>
           <div class="text-right">
-            <button class="btn btn-primary" type="submit">
+            <button [title]="addAuctionForm.invalid ? 'Niepoprawne dane' : 'Wyślij'" class="btn btn-primary" type="submit" [disabled]="addAuctionForm.invalid">
               <i class="fa fa-gavel"> </i>
               Dodaj aukcję
             </button>

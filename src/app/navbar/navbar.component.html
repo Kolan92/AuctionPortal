@@ -5,15 +5,18 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <!-- <div class="collapse navbar-collapse" [ngClass]="{show: toggleMenu}"> -->
+
   <div class="collapse navbar-collapse" [class.show]="toggleMenu">
     <ul class="navbar-nav">
       <li class="nav-item active" apHighlight [routerLinkActive]="'active'"  *ngFor="let menuItem of menuItems">
         <a class="nav-link" [routerLink]="menuItem.href">{{menuItem.title}}</a>
       </li>
     </ul>
+
   </div>
 
   <div>
+
       <a class="btn btn-primary" [routerLink]="'add-auction'">
         <i class="fa fa-plus"></i> Dodaj
       </a>

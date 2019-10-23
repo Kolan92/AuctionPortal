@@ -15,6 +15,7 @@ export class AuctionSiteComponent implements OnInit, OnDestroy {
   public auctions: AuctionItem[];
   public isLoading = true;
   public errorMessage = '';
+  public filter: '';
   private subscription = new Subscription();
 
   constructor(

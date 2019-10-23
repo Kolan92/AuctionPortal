@@ -9,10 +9,19 @@ import { Observable } from 'rxjs';
 })
 export class AuctionService {
 
-    constructor(private httpClient: HttpClient) { }
+  private baseUrl = "http://localhost:3000";
+  private auctionUrl = `${this.baseUrl}/auctions`;
 
-    public getAll(): Observable<AuctionItem[]> {
+  constructor(private httpClient: HttpClient) { }
 
-      return this.httpClient.get<AuctionItem[]>("http://localhost:3000/auctions");
-    }
+  public getAll(): Observable<AuctionItem[]> {
+
+    return this.httpClient.get<AuctionItem[]>(this.auctionUrl);
   }
+
+  public addAuction(newAuction: AuctionItem): Observable<AuctionItem> {
+
+    return this.httpClient.post<AuctionItem>(this.auctionUrl, newAuction);
+
+  }
+}

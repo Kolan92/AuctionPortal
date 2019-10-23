@@ -8,6 +8,9 @@ import { AddAuctionSiteComponent } from './add-auction-site/add-auction-site.com
 import { CartSiteComponent } from './cart-site/cart-site.component';
 import { CartItemsSiteComponent } from './cart-items-site/cart-items-site.component';
 import { SharedModule } from '../shared/shared.module';
+import { FilterAuctionsPipe } from './filter-auctions.pipe';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -17,13 +20,15 @@ import { SharedModule } from '../shared/shared.module';
     PromotionSiteComponent,
     AddAuctionSiteComponent,
     CartSiteComponent,
-    CartItemsSiteComponent
+    CartItemsSiteComponent,
+    FilterAuctionsPipe
   ],
   exports: [AuctionSiteComponent, PromotionSiteComponent, CartItemsSiteComponent],
   imports: [
     CommonModule,
     SharedModule,
-    AuctionRoutingModule
+    AuctionRoutingModule,
+    FormsModule
   ]
 })
 export class AuctionModule { }
